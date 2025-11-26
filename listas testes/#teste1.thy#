@@ -1,0 +1,24 @@
+theory funcaorecursiva
+  imports Main
+begin
+
+
+fun dobro :: "nat \<Rightarrow> nat" where
+  "dobro x = x * 2"
+
+
+fun soma :: "nat list \<Rightarrow> nat" where
+  "soma [] = 0" |
+  "soma (x # xs) = x + soma xs"
+(* *)
+
+fun proximo :: "nat \<Rightarrow> nat" where
+  "proximo n = n + 1"
+(* *)
+
+fun contagem :: "nat \<Rightarrow> nat" where
+  "contagem 0 = 0" |
+  "contagem n = contagem (n - 1)"
+
+
+end
